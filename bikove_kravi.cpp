@@ -18,6 +18,8 @@ int main()
     potrebitel3=potrebitel/100%10;
     potrebitel4=potrebitel/1000;
     while (potrebitel!=programa){
+        cows=0;
+        bulls=0;
         if (potrebitel1==programa1){
             cows++;
         }
