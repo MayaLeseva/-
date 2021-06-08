@@ -5,9 +5,9 @@ using namespace std;
 int main()
 {
     srand(time(0));
-    int programa = rand() % 9000 + 1000, potrebitel;
+    int programa = rand() % 9000 + 1000, potrebitel, bulls=0, cows=0;
     int programa1, programa2, programa3, programa4, potrebitel1, potrebitel2, potrebitel3, potrebitel4;
-    cout<<"Type your guess!";
+    cout<<"Type a four-digit number with different digits for your guess!";
     cin>>potrebitel;
     programa1=programa%10;
     programa2=programa/10%10;
@@ -17,5 +17,36 @@ int main()
     potrebitel2=potrebitel/10%10;
     potrebitel3=potrebitel/100%10;
     potrebitel4=potrebitel/1000;
+    while (potrebitel!=programa){
+        if (potrebitel1==programa1){
+            cows++;
+        }
+        if (potrebitel2==programa2){
+            cows++;
+        }
+        if (potrebitel3==programa3){
+            cows++;
+        }
+        if (potrebitel4==programa4){
+            cows++;
+        }
+        if (potrebitel1==programa2 or potrebitel1==programa3 or potrebitel1==programa4){
+            bulls++;
+        }
+        if (potrebitel2==programa1 or potrebitel2==programa3 or potrebitel1==programa4){
+            bulls++;
+        }
+        if (potrebitel3==programa1 or potrebitel1==programa2 or potrebitel1==programa4){
+            bulls++;
+        }
+        if (potrebitel4==programa1 or potrebitel4==programa2 or potrebitel4==programa3){
+            bulls++;
+        }
+        cout<<"Yor have "<<cows<<" cows and "<<bulls<<" bulls!\n Type you guess!";
+        cin>>potrebitel;
+    }
+    if(potrebitel==programa){
+        cout<<"You won!";
+    }
     return 0;
 }
