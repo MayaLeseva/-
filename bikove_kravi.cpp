@@ -14,10 +14,10 @@ int main()
     programa3=programa/100%10;
     programa4=programa/1000;
     while (potrebitel!=programa){
-    potrebitel1=potrebitel%10;
-    potrebitel2=potrebitel/10%10;
-    potrebitel3=potrebitel/100%10;
-    potrebitel4=potrebitel/1000;
+        potrebitel1=potrebitel%10;
+        potrebitel2=potrebitel/10%10;
+        potrebitel3=potrebitel/100%10;
+        potrebitel4=potrebitel/1000;
         cows=0;
         bulls=0;
         if (potrebitel1==programa1){
