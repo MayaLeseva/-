@@ -13,38 +13,37 @@ int main()
     programa2=programa/10%10;
     programa3=programa/100%10;
     programa4=programa/1000;
+    while (potrebitel!=programa){
     potrebitel1=potrebitel%10;
     potrebitel2=potrebitel/10%10;
     potrebitel3=potrebitel/100%10;
     potrebitel4=potrebitel/1000;
-    while (potrebitel!=programa){
         cows=0;
         bulls=0;
         if (potrebitel1==programa1){
+            bulls++;
+        }
+        else if (potrebitel1==programa2 or potrebitel1==programa3 or potrebitel1==programa4){
             cows++;
         }
         if (potrebitel2==programa2){
-            cows++;
+            bulls++;
+            else if (potrebitel2==programa1 or potrebitel2==programa3 or potrebitel2==programa4){
+            cows++;  
         }
         if (potrebitel3==programa3){
+            bulls++;
+           else if (potrebitel3==programa1 or potrebitel1==programa2 or potrebitel1==programa4){
             cows++;
         }
         if (potrebitel4==programa4){
+            bulls++;
+           else  if (potrebitel4==programa1 or potrebitel4==programa2 or potrebitel4==programa3){
             cows++;
         }
-        if (potrebitel1==programa2 or potrebitel1==programa3 or potrebitel1==programa4){
-            bulls++;
-        }
-        if (potrebitel2==programa1 or potrebitel2==programa3 or potrebitel1==programa4){
-            bulls++;
-        }
-        if (potrebitel3==programa1 or potrebitel1==programa2 or potrebitel1==programa4){
-            bulls++;
-        }
-        if (potrebitel4==programa1 or potrebitel4==programa2 or potrebitel4==programa3){
-            bulls++;
-        }
-        cout<<"Yor have "<<cows<<" cows and "<<bulls<<" bulls!\n Type you guess!";
+
+    
+        cout<<"Yor have "<<bulls<<" bulls and "<<cows<<" cows!\n Type you guess!";
         cin>>potrebitel;
     }
     if(potrebitel==programa){
