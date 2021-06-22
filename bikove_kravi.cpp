@@ -5,14 +5,17 @@ using namespace std;
 int main()
 {
     srand(time(0));
-    int programa = rand() % 9000 + 1000, potrebitel, bulls=0, cows=0;
+    int programa, potrebitel, bulls=0, cows=0;
     int programa1, programa2, programa3, programa4, potrebitel1, potrebitel2, potrebitel3, potrebitel4;
     cout<<"Type a four-digit number with different digits for your guess!";
     cin>>potrebitel;
-    programa1=programa%10;
+    do{
+     programa=rand()%9000 + 1000;
+programa1=programa%10;
     programa2=programa/10%10;
     programa3=programa/100%10;
     programa4=programa/1000;
+    }
     while (potrebitel!=programa){
         potrebitel1=potrebitel%10;
         potrebitel2=potrebitel/10%10;
