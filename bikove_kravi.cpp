@@ -31,21 +31,22 @@ int main()
         }
         if (potrebitel2==programa2){
             bulls++;
-            else if (potrebitel2==programa1 or potrebitel2==programa3 or potrebitel2==programa4){
+        }
+        else if (potrebitel2==programa1 or potrebitel2==programa3 or potrebitel2==programa4){
             cows++;  
         }
         if (potrebitel3==programa3){
             bulls++;
-           else if (potrebitel3==programa1 or potrebitel1==programa2 or potrebitel1==programa4){
+        }
+        else if (potrebitel3==programa1 or potrebitel1==programa2 or potrebitel1==programa4){
             cows++;
         }
         if (potrebitel4==programa4){
             bulls++;
-           else  if (potrebitel4==programa1 or potrebitel4==programa2 or potrebitel4==programa3){
+        }
+        else  if (potrebitel4==programa1 or potrebitel4==programa2 or potrebitel4==programa3){
             cows++;
         }
-
-    
         cout<<"Yor have "<<bulls<<" bulls and "<<cows<<" cows!\n Type you guess!";
         cin>>potrebitel;
     }
