@@ -15,7 +15,7 @@ int main()
         programa2=programa/10%10;
         programa3=programa/100%10;
         programa4=programa/1000;
-    }while(programa1=programa2 or programa1=programa3 or programa1=programa4 or programa2=programa3 or programa2=programa4 or programa3=programa4)
+    }while(programa1==programa2 or programa1==programa3 or programa1==programa4 or programa2==programa3 or programa2==programa4 or programa3==programa4);
     while (potrebitel!=programa){
         potrebitel1=potrebitel%10;
         potrebitel2=potrebitel/10%10;
